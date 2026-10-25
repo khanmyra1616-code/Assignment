@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CodeLab</title>
 <style>
   body { margin: 0; font-family: Arial; }
 
-  /* navbar */
+  /* ---------- 1. navbar ---------- */
   nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +35,7 @@
     border: none;
   }
 
-  /* banner: text in the centre */
+  /* ---------- 2. banner ---------- */
   .banner {
     display: flex;
     flex-direction: column;
@@ -44,7 +46,7 @@
     color: white;
   }
 
-  /* row of cards: flex-wrap moves cards to the next line when there is no space */
+  /* ---------- 3. row of cards ---------- */
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -52,7 +54,6 @@
     padding: 24px;
   }
 
-  /* flex: 1 1 200px = grow, shrink, start at 200px */
   .card {
     flex: 1 1 200px;
     background-color: lavender;
@@ -62,6 +63,8 @@
 </style>
 </head>
 <body>
+
+  <!-- 1. navbar -->
   <nav>
     <h2>CodeLab</h2>
     <ul>
@@ -72,12 +75,14 @@
     <button>Sign up</button>
   </nav>
 
+  <!-- 2. banner -->
   <div class="banner">
     <h1>Learn Web Development</h1>
     <p>Start from zero. Build real projects.</p>
     <button>Get started</button>
   </div>
 
+  <!-- 3. row of cards -->
   <div class="cards">
     <div class="card">
       <h3>HTML</h3>
@@ -96,5 +101,6 @@
       <p>Save your work</p>
     </div>
   </div>
+
 </body>
 </html>
