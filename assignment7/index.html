@@ -8,10 +8,10 @@
     background-color: lavender;
   }
 
-  /* grid: boxes are placed in 3 columns */
+  /* boxes arrange themselves: as many columns as can fit, each at least 150px wide */
   .gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
   }
 
