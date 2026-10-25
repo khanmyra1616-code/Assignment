@@ -12,11 +12,21 @@
     font-size: 1rem;
   }
 
+  /* grid for the page sections: navbar, hero, features and footer */
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* flexbox for the navbar: on a phone the items are in a column */
   nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     background-color: midnightblue;
     color: white;
     padding: 14px;
-    text-align: center;
   }
 
   nav a {
@@ -45,7 +55,7 @@
     margin-top: 16px;
   }
 
-  /* phone: 1 column */
+  /* grid for the boxes: phone has 1 column */
   .features {
     display: grid;
     grid-template-columns: 1fr;
@@ -68,6 +78,13 @@
 
   /* ---------- TABLET: screen 768px or wider ---------- */
   @media (min-width: 768px) {
+    /* navbar goes in a row: logo on the left, links on the right */
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 14px 32px;
+    }
+
     .hero h1 {
       font-size: 2.4rem;
     }
@@ -86,34 +103,40 @@
 </style>
 </head>
 <body>
-  <nav>
-    <h2>TravelEase</h2>
-    <a href="#">Home</a>
-    <a href="#">Trips</a>
-    <a href="#">Contact</a>
-  </nav>
+  <div class="page">
 
-  <div class="hero">
-    <h1>Plan your next trip in minutes</h1>
-    <p>Simple, cheap and fun travel plans.</p>
-    <img src="img/hero.jpg" alt="Mountain trip banner" width="600">
+    <nav>
+      <h2>TravelEase</h2>
+      <div>
+        <a href="#">Home</a>
+        <a href="#">Trips</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Plan your next trip in minutes</h1>
+      <p>Simple, cheap and fun travel plans.</p>
+      <img src="img/hero.jpg" alt="Mountain trip banner" width="600">
+    </div>
+
+    <div class="features">
+      <div class="box">
+        <h3>Easy Booking</h3>
+        <p>Book in 3 clicks.</p>
+      </div>
+      <div class="box">
+        <h3>Best Prices</h3>
+        <p>We compare for you.</p>
+      </div>
+      <div class="box">
+        <h3>24x7 Help</h3>
+        <p>We are always online.</p>
+      </div>
+    </div>
+
+    <footer>Made by a first year student</footer>
+
   </div>
-
-  <div class="features">
-    <div class="box">
-      <h3>Easy Booking</h3>
-      <p>Book in 3 clicks.</p>
-    </div>
-    <div class="box">
-      <h3>Best Prices</h3>
-      <p>We compare for you.</p>
-    </div>
-    <div class="box">
-      <h3>24x7 Help</h3>
-      <p>We are always online.</p>
-    </div>
-  </div>
-
-  <footer>Made by a first year student</footer>
 </body>
 </html>
