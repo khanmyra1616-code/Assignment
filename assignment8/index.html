@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TravelEase</title>
 <style>
-  /* ---------- MOBILE LAYOUT (written first) ---------- */
+  /* mobile layout first */
   body {
     margin: 0;
     font-family: Arial;
     font-size: 1rem;
   }
 
-  /* grid for the page sections: navbar, hero, features and footer */
+  /* grid for the page sections */
   .page {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  /* flexbox for the navbar: on a phone the items are in a column */
+  /* flexbox for the navbar */
   nav {
     display: flex;
     flex-direction: column;
@@ -43,19 +43,16 @@
     text-align: center;
   }
 
-  /* rem for font sizes */
   .hero h1 {
     font-size: 1.6rem;
   }
 
-  /* max-width: 100% makes the image fit the screen */
   .hero img {
     max-width: 100%;
     height: auto;
     margin-top: 16px;
   }
 
-  /* grid for the boxes: phone has 1 column */
   .features {
     display: grid;
     grid-template-columns: 1fr;
@@ -76,9 +73,8 @@
     padding: 16px;
   }
 
-  /* ---------- TABLET: screen 768px or wider ---------- */
+  /* tablet: 768px and wider */
   @media (min-width: 768px) {
-    /* navbar goes in a row: logo on the left, links on the right */
     nav {
       flex-direction: row;
       justify-content: space-between;
@@ -94,10 +90,15 @@
     }
   }
 
-  /* ---------- LAPTOP: screen 1024px or wider ---------- */
+  /* desktop (laptop): 1024px and wider */
   @media (min-width: 1024px) {
+    .hero h1 {
+      font-size: 3rem;
+    }
+
     .features {
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 40px;
     }
   }
 </style>
