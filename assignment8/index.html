@@ -9,6 +9,7 @@
   body {
     margin: 0;
     font-family: Arial;
+    font-size: 1rem;
   }
 
   nav {
@@ -22,6 +23,7 @@
     color: white;
     text-decoration: none;
     margin: 0 8px;
+    font-size: 0.9rem;
   }
 
   .hero {
@@ -29,6 +31,18 @@
     color: white;
     padding: 40px 16px;
     text-align: center;
+  }
+
+  /* rem for font sizes */
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  /* max-width: 100% makes the image fit the screen */
+  .hero img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 16px;
   }
 
   /* phone: 1 column */
@@ -54,6 +68,10 @@
 
   /* ---------- TABLET: screen 768px or wider ---------- */
   @media (min-width: 768px) {
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+
     .features {
       grid-template-columns: 1fr 1fr;
     }
@@ -78,6 +96,7 @@
   <div class="hero">
     <h1>Plan your next trip in minutes</h1>
     <p>Simple, cheap and fun travel plans.</p>
+    <img src="img/hero.jpg" alt="Mountain trip banner" width="600">
   </div>
 
   <div class="features">
