@@ -3,38 +3,45 @@
 <head>
 <title>CodeLab</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; font-family: Arial; }
 
-  body { font-family: Arial; }
-
-  /* navbar: display flex puts the items in one row */
+  /* navbar */
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 24px;
     background-color: midnightblue;
     color: white;
+    padding: 15px;
   }
 
-  /* links in a row */
   nav ul {
     display: flex;
-    gap: 20px;
     list-style: none;
   }
+
+  nav li { margin: 10px; }
 
   nav a {
     color: white;
     text-decoration: none;
   }
 
-  .btn {
+  button {
     background-color: gold;
-    border: 0;
     padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: bold;
+    border: none;
+  }
+
+  /* banner: text in the centre */
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+    background-color: royalblue;
+    color: white;
   }
 </style>
 </head>
@@ -46,7 +53,13 @@
       <li><a href="#">Courses</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-    <button class="btn">Sign up</button>
+    <button>Sign up</button>
   </nav>
+
+  <div class="banner">
+    <h1>Learn Web Development</h1>
+    <p>Start from zero. Build real projects.</p>
+    <button>Get started</button>
+  </div>
 </body>
 </html>
