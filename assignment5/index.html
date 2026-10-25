@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <title>Profile Card</title>
 <style>
-  /* width will include padding and border */
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: lavender;
   }
 
@@ -20,17 +19,50 @@
     text-align: center;
   }
 
-  /* box model: width, padding, border, margin */
-  .card {
+  /* card 1 (blue): border and round corners */
+  .card1 {
     width: 280px;
     margin: 24px auto;
     padding: 20px;
     border: 2px solid royalblue;
+    border-radius: 16px;
     background-color: white;
     text-align: center;
   }
 
-  .avatar { font-size: 36px; }
+  /* card 2 (green): same as card 1, only the colour is different */
+  .card2 {
+    width: 280px;
+    margin: 24px auto;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 16px;
+    background-color: white;
+    text-align: center;
+  }
+
+  /* circle avatar: same width and height, border-radius 50% */
+  .avatar1 {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: royalblue;
+    color: white;
+    font-size: 36px;
+    line-height: 90px;
+    margin: auto;
+  }
+
+  .avatar2 {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-size: 36px;
+    line-height: 90px;
+    margin: auto;
+  }
 
   .bio {
     text-align: left;
@@ -41,8 +73,8 @@
 <body>
   <header>My Profile Page</header>
 
-  <div class="card">
-    <div class="avatar">M</div>
+  <div class="card1">
+    <div class="avatar1">M</div>
     <h2>Myra Khan</h2>
     <p>Web Developer in Making</p>
     <div class="bio">
@@ -50,6 +82,15 @@
     </div>
   </div>
 
-  <button class="fab">+</button>
+  <div class="card2">
+    <div class="avatar2">M</div>
+    <h2>Myra Khan</h2>
+    <p>Web Developer in Making</p>
+    <div class="bio">
+      Hi! I am Myra. I started coding this year. I like learning HTML, CSS and Python. My goal is to build my own app. This long text is here so that the box shows a scroll bar. Try scrolling it!
+    </div>
+  </div>
+
+  <button>+</button>
 </body>
 </html>
